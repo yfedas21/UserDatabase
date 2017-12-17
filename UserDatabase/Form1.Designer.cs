@@ -36,25 +36,28 @@
             this.label5 = new System.Windows.Forms.Label();
             this.firstNameTextBox = new System.Windows.Forms.TextBox();
             this.lastNameTextBox = new System.Windows.Forms.TextBox();
-            this.ageTextBox = new System.Windows.Forms.TextBox();
-            this.occupationTextBox = new System.Windows.Forms.TextBox();
+            this.majorTextBox = new System.Windows.Forms.TextBox();
+            this.yearTextBox = new System.Windows.Forms.TextBox();
             this.addButton = new System.Windows.Forms.Button();
             this.closeButton = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.databaseGroupBox = new System.Windows.Forms.GroupBox();
+            this.studentDataGridView = new System.Windows.Forms.DataGridView();
             this.schoolDataSet = new UserDatabase.SchoolDataSet();
-            this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.employeeTableAdapter = new UserDatabase.SchoolDataSetTableAdapters.EmployeeTableAdapter();
-            this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ageDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.occupationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.studentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.studentTableAdapter = new UserDatabase.SchoolDataSetTableAdapters.StudentTableAdapter();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.firstnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.majorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.yearDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studentGroupBox = new System.Windows.Forms.GroupBox();
+            this.databaseGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.studentDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.schoolDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).BeginInit();
+            this.studentGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -70,7 +73,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(36, 97);
+            this.label2.Location = new System.Drawing.Point(6, 43);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(84, 17);
             this.label2.TabIndex = 1;
@@ -79,7 +82,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(36, 146);
+            this.label3.Location = new System.Drawing.Point(6, 75);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(84, 17);
             this.label3.TabIndex = 2;
@@ -88,163 +91,180 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(79, 192);
+            this.label4.Location = new System.Drawing.Point(43, 107);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(41, 17);
+            this.label4.Size = new System.Drawing.Size(47, 17);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Age: ";
+            this.label4.Text = "Major:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(32, 236);
+            this.label5.Location = new System.Drawing.Point(48, 138);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(88, 17);
+            this.label5.Size = new System.Drawing.Size(42, 17);
             this.label5.TabIndex = 4;
-            this.label5.Text = "Occupation: ";
+            this.label5.Text = "Year:";
             // 
             // firstNameTextBox
             // 
-            this.firstNameTextBox.Location = new System.Drawing.Point(127, 92);
+            this.firstNameTextBox.Location = new System.Drawing.Point(97, 38);
             this.firstNameTextBox.Name = "firstNameTextBox";
-            this.firstNameTextBox.Size = new System.Drawing.Size(402, 22);
+            this.firstNameTextBox.Size = new System.Drawing.Size(200, 22);
             this.firstNameTextBox.TabIndex = 5;
             // 
             // lastNameTextBox
             // 
-            this.lastNameTextBox.Location = new System.Drawing.Point(127, 140);
+            this.lastNameTextBox.Location = new System.Drawing.Point(97, 70);
             this.lastNameTextBox.Name = "lastNameTextBox";
-            this.lastNameTextBox.Size = new System.Drawing.Size(402, 22);
+            this.lastNameTextBox.Size = new System.Drawing.Size(200, 22);
             this.lastNameTextBox.TabIndex = 6;
             // 
-            // ageTextBox
+            // majorTextBox
             // 
-            this.ageTextBox.Location = new System.Drawing.Point(127, 187);
-            this.ageTextBox.Name = "ageTextBox";
-            this.ageTextBox.Size = new System.Drawing.Size(402, 22);
-            this.ageTextBox.TabIndex = 7;
+            this.majorTextBox.Location = new System.Drawing.Point(97, 102);
+            this.majorTextBox.Name = "majorTextBox";
+            this.majorTextBox.Size = new System.Drawing.Size(200, 22);
+            this.majorTextBox.TabIndex = 7;
             // 
-            // occupationTextBox
+            // yearTextBox
             // 
-            this.occupationTextBox.Location = new System.Drawing.Point(127, 231);
-            this.occupationTextBox.Name = "occupationTextBox";
-            this.occupationTextBox.Size = new System.Drawing.Size(402, 22);
-            this.occupationTextBox.TabIndex = 8;
+            this.yearTextBox.Location = new System.Drawing.Point(97, 133);
+            this.yearTextBox.Name = "yearTextBox";
+            this.yearTextBox.Size = new System.Drawing.Size(97, 22);
+            this.yearTextBox.TabIndex = 8;
             // 
             // addButton
             // 
-            this.addButton.Location = new System.Drawing.Point(514, 289);
+            this.addButton.Location = new System.Drawing.Point(255, 171);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(138, 34);
             this.addButton.TabIndex = 9;
             this.addButton.Text = "Add to Database";
             this.addButton.UseVisualStyleBackColor = true;
+            this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
             // closeButton
             // 
-            this.closeButton.Location = new System.Drawing.Point(659, 289);
+            this.closeButton.Location = new System.Drawing.Point(701, 279);
             this.closeButton.Name = "closeButton";
             this.closeButton.Size = new System.Drawing.Size(75, 34);
             this.closeButton.TabIndex = 10;
             this.closeButton.Text = "Close";
             this.closeButton.UseVisualStyleBackColor = true;
+            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
             // 
-            // groupBox1
+            // databaseGroupBox
             // 
-            this.groupBox1.Controls.Add(this.dataGridView1);
-            this.groupBox1.Location = new System.Drawing.Point(13, 348);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(763, 363);
-            this.groupBox1.TabIndex = 11;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Database";
+            this.databaseGroupBox.Controls.Add(this.studentDataGridView);
+            this.databaseGroupBox.Location = new System.Drawing.Point(13, 319);
+            this.databaseGroupBox.Name = "databaseGroupBox";
+            this.databaseGroupBox.Size = new System.Drawing.Size(763, 363);
+            this.databaseGroupBox.TabIndex = 11;
+            this.databaseGroupBox.TabStop = false;
+            this.databaseGroupBox.Text = "Database";
             // 
-            // dataGridView1
+            // studentDataGridView
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.firstNameDataGridViewTextBoxColumn,
-            this.lastNameDataGridViewTextBoxColumn,
-            this.ageDataGridViewTextBoxColumn,
-            this.occupationDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.employeeBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 22);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(763, 341);
-            this.dataGridView1.TabIndex = 0;
+            this.studentDataGridView.AutoGenerateColumns = false;
+            this.studentDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.studentDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.studentDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn,
+            this.firstnameDataGridViewTextBoxColumn,
+            this.lastnameDataGridViewTextBoxColumn,
+            this.majorDataGridViewTextBoxColumn,
+            this.yearDataGridViewTextBoxColumn});
+            this.studentDataGridView.DataSource = this.studentBindingSource;
+            this.studentDataGridView.Location = new System.Drawing.Point(0, 22);
+            this.studentDataGridView.MultiSelect = false;
+            this.studentDataGridView.Name = "studentDataGridView";
+            this.studentDataGridView.RowTemplate.Height = 24;
+            this.studentDataGridView.Size = new System.Drawing.Size(763, 341);
+            this.studentDataGridView.TabIndex = 0;
             // 
             // schoolDataSet
             // 
             this.schoolDataSet.DataSetName = "SchoolDataSet";
             this.schoolDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // employeeBindingSource
+            // studentBindingSource
             // 
-            this.employeeBindingSource.DataMember = "Employee";
-            this.employeeBindingSource.DataSource = this.schoolDataSet;
+            this.studentBindingSource.DataMember = "Student";
+            this.studentBindingSource.DataSource = this.schoolDataSet;
             // 
-            // employeeTableAdapter
+            // studentTableAdapter
             // 
-            this.employeeTableAdapter.ClearBeforeFill = true;
+            this.studentTableAdapter.ClearBeforeFill = true;
             // 
-            // firstNameDataGridViewTextBoxColumn
+            // idDataGridViewTextBoxColumn
             // 
-            this.firstNameDataGridViewTextBoxColumn.DataPropertyName = "firstName";
-            this.firstNameDataGridViewTextBoxColumn.HeaderText = "firstName";
-            this.firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
-            this.firstNameDataGridViewTextBoxColumn.Width = 97;
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
             // 
-            // lastNameDataGridViewTextBoxColumn
+            // firstnameDataGridViewTextBoxColumn
             // 
-            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "lastName";
-            this.lastNameDataGridViewTextBoxColumn.HeaderText = "lastName";
-            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
-            this.lastNameDataGridViewTextBoxColumn.Width = 96;
+            this.firstnameDataGridViewTextBoxColumn.DataPropertyName = "first_name";
+            this.firstnameDataGridViewTextBoxColumn.HeaderText = "First Name";
+            this.firstnameDataGridViewTextBoxColumn.Name = "firstnameDataGridViewTextBoxColumn";
             // 
-            // ageDataGridViewTextBoxColumn
+            // lastnameDataGridViewTextBoxColumn
             // 
-            this.ageDataGridViewTextBoxColumn.DataPropertyName = "age";
-            this.ageDataGridViewTextBoxColumn.HeaderText = "age";
-            this.ageDataGridViewTextBoxColumn.Name = "ageDataGridViewTextBoxColumn";
-            this.ageDataGridViewTextBoxColumn.Width = 61;
+            this.lastnameDataGridViewTextBoxColumn.DataPropertyName = "last_name";
+            this.lastnameDataGridViewTextBoxColumn.HeaderText = "Last Name";
+            this.lastnameDataGridViewTextBoxColumn.Name = "lastnameDataGridViewTextBoxColumn";
             // 
-            // occupationDataGridViewTextBoxColumn
+            // majorDataGridViewTextBoxColumn
             // 
-            this.occupationDataGridViewTextBoxColumn.DataPropertyName = "occupation";
-            this.occupationDataGridViewTextBoxColumn.HeaderText = "occupation";
-            this.occupationDataGridViewTextBoxColumn.Name = "occupationDataGridViewTextBoxColumn";
-            this.occupationDataGridViewTextBoxColumn.Width = 106;
+            this.majorDataGridViewTextBoxColumn.DataPropertyName = "major";
+            this.majorDataGridViewTextBoxColumn.HeaderText = "Major";
+            this.majorDataGridViewTextBoxColumn.Name = "majorDataGridViewTextBoxColumn";
+            // 
+            // yearDataGridViewTextBoxColumn
+            // 
+            this.yearDataGridViewTextBoxColumn.DataPropertyName = "year";
+            this.yearDataGridViewTextBoxColumn.HeaderText = "Year";
+            this.yearDataGridViewTextBoxColumn.Name = "yearDataGridViewTextBoxColumn";
+            // 
+            // studentGroupBox
+            // 
+            this.studentGroupBox.Controls.Add(this.firstNameTextBox);
+            this.studentGroupBox.Controls.Add(this.label2);
+            this.studentGroupBox.Controls.Add(this.label3);
+            this.studentGroupBox.Controls.Add(this.addButton);
+            this.studentGroupBox.Controls.Add(this.label4);
+            this.studentGroupBox.Controls.Add(this.yearTextBox);
+            this.studentGroupBox.Controls.Add(this.label5);
+            this.studentGroupBox.Controls.Add(this.majorTextBox);
+            this.studentGroupBox.Controls.Add(this.lastNameTextBox);
+            this.studentGroupBox.Location = new System.Drawing.Point(13, 84);
+            this.studentGroupBox.Name = "studentGroupBox";
+            this.studentGroupBox.Size = new System.Drawing.Size(399, 211);
+            this.studentGroupBox.TabIndex = 12;
+            this.studentGroupBox.TabStop = false;
+            this.studentGroupBox.Text = "Student";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(788, 723);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.studentGroupBox);
+            this.Controls.Add(this.databaseGroupBox);
             this.Controls.Add(this.closeButton);
-            this.Controls.Add(this.addButton);
-            this.Controls.Add(this.occupationTextBox);
-            this.Controls.Add(this.ageTextBox);
-            this.Controls.Add(this.lastNameTextBox);
-            this.Controls.Add(this.firstNameTextBox);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.ShowIcon = false;
             this.Text = "User Database";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            this.databaseGroupBox.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.studentDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.schoolDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).EndInit();
+            this.studentGroupBox.ResumeLayout(false);
+            this.studentGroupBox.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -259,20 +279,22 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox firstNameTextBox;
         private System.Windows.Forms.TextBox lastNameTextBox;
-        private System.Windows.Forms.TextBox ageTextBox;
-        private System.Windows.Forms.TextBox occupationTextBox;
+        private System.Windows.Forms.TextBox majorTextBox;
+        private System.Windows.Forms.TextBox yearTextBox;
         private System.Windows.Forms.Button addButton;
         private System.Windows.Forms.Button closeButton;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.GroupBox databaseGroupBox;
+        private System.Windows.Forms.DataGridView studentDataGridView;
         private System.Windows.Forms.BindingSource bindingSource1;
         private SchoolDataSet schoolDataSet;
-        private System.Windows.Forms.BindingSource employeeBindingSource;
-        private SchoolDataSetTableAdapters.EmployeeTableAdapter employeeTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn firstNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ageDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn occupationDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource studentBindingSource;
+        private SchoolDataSetTableAdapters.StudentTableAdapter studentTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn firstnameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lastnameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn majorDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn yearDataGridViewTextBoxColumn;
+        private System.Windows.Forms.GroupBox studentGroupBox;
     }
 }
 
