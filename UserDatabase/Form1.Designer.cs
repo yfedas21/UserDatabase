@@ -42,21 +42,22 @@
             this.closeButton = new System.Windows.Forms.Button();
             this.databaseGroupBox = new System.Windows.Forms.GroupBox();
             this.studentDataGridView = new System.Windows.Forms.DataGridView();
-            this.schoolDataSet = new UserDatabase.SchoolDataSet();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.studentBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.studentTableAdapter = new UserDatabase.SchoolDataSetTableAdapters.StudentTableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.firstnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.majorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.yearDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.schoolDataSet = new UserDatabase.SchoolDataSet();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.studentTableAdapter = new UserDatabase.SchoolDataSetTableAdapters.StudentTableAdapter();
             this.studentGroupBox = new System.Windows.Forms.GroupBox();
+            this.refreshButton = new System.Windows.Forms.Button();
             this.databaseGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.studentDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.schoolDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).BeginInit();
             this.studentGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -183,20 +184,6 @@
             this.studentDataGridView.Size = new System.Drawing.Size(763, 341);
             this.studentDataGridView.TabIndex = 0;
             // 
-            // schoolDataSet
-            // 
-            this.schoolDataSet.DataSetName = "SchoolDataSet";
-            this.schoolDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // studentBindingSource
-            // 
-            this.studentBindingSource.DataMember = "Student";
-            this.studentBindingSource.DataSource = this.schoolDataSet;
-            // 
-            // studentTableAdapter
-            // 
-            this.studentTableAdapter.ClearBeforeFill = true;
-            // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
@@ -227,6 +214,20 @@
             this.yearDataGridViewTextBoxColumn.HeaderText = "Year";
             this.yearDataGridViewTextBoxColumn.Name = "yearDataGridViewTextBoxColumn";
             // 
+            // studentBindingSource
+            // 
+            this.studentBindingSource.DataMember = "Student";
+            this.studentBindingSource.DataSource = this.schoolDataSet;
+            // 
+            // schoolDataSet
+            // 
+            this.schoolDataSet.DataSetName = "SchoolDataSet";
+            this.schoolDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // studentTableAdapter
+            // 
+            this.studentTableAdapter.ClearBeforeFill = true;
+            // 
             // studentGroupBox
             // 
             this.studentGroupBox.Controls.Add(this.firstNameTextBox);
@@ -245,11 +246,22 @@
             this.studentGroupBox.TabStop = false;
             this.studentGroupBox.Text = "Student";
             // 
+            // refreshButton
+            // 
+            this.refreshButton.Location = new System.Drawing.Point(552, 279);
+            this.refreshButton.Name = "refreshButton";
+            this.refreshButton.Size = new System.Drawing.Size(134, 34);
+            this.refreshButton.TabIndex = 13;
+            this.refreshButton.Text = "Refresh Database";
+            this.refreshButton.UseVisualStyleBackColor = true;
+            this.refreshButton.Click += new System.EventHandler(this.refreshButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(788, 723);
+            this.Controls.Add(this.refreshButton);
             this.Controls.Add(this.studentGroupBox);
             this.Controls.Add(this.databaseGroupBox);
             this.Controls.Add(this.closeButton);
@@ -260,9 +272,9 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.databaseGroupBox.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.studentDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.schoolDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).EndInit();
             this.studentGroupBox.ResumeLayout(false);
             this.studentGroupBox.PerformLayout();
             this.ResumeLayout(false);
@@ -295,6 +307,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn majorDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn yearDataGridViewTextBoxColumn;
         private System.Windows.Forms.GroupBox studentGroupBox;
+        private System.Windows.Forms.Button refreshButton;
     }
 }
 
